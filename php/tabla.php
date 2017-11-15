@@ -3,7 +3,7 @@
 include "conexion.php";
 
 $user_id=null;
-$sql1= "select * from alumnos";
+$sql1= "select * from alumnos order by seccion asc";
 $query = $con->query($sql1);
 ?>
 

@@ -4,6 +4,14 @@
   <title>Evaluacion</title>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
   <script src="js/jquery.min.js"></script>
+  <style type="text/css">
+    .sol{
+    width: 60px;
+  }
+  .luna{
+    width: 300px;
+  }
+  </style>
 </head>
 <body>
 	<?php include "php/navbar.php"; ?>
@@ -14,7 +22,7 @@
         <!-- Button trigger modal -->
         <div>
           <br>
-          <label>codigo criterio</label> <input type="text" name="codigo" id="criterio"> <label>Considera que ESA es un aporte para su desarrollo profesional?</label>
+          <label>codigo criterio</label> &nbsp;<input type="text" name="codigo" id="criterio" class="sol"> <label>Considera que ESA es un aporte para su desarrollo profesional?</label>
         </div>
         <div>
           <br>
