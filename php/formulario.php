@@ -2,42 +2,38 @@
 include "conexion.php";
 
 $user_id=null;
-$sql1= "select * from person where id = ".$_GET["id"];
+$sql1= "select * from alumnos where id = ".$_GET["id"];
 $query = $con->query($sql1);
-$person = null;
+$alumnos = null;
 if($query->num_rows>0){
 while ($r=$query->fetch_object()){
-  $person=$r;
+  $alumnos=$r;
   break;
 }
 
   }
 ?>
 
-<?php if($person!=null):?>
+<?php if($alumnos!=null):?>
 
 <form role="form" method="post" action="php/actualizar.php">
   <div class="form-group">
-    <label for="name">Nombre</label>
-    <input type="text" class="form-control" value="<?php echo $person->name; ?>" name="name" required>
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" value="<?php echo $alumnos->nombre; ?>" name="nombre" required>
   </div>
   <div class="form-group">
-    <label for="lastname">Apellido</label>
-    <input type="text" class="form-control" value="<?php echo $person->lastname; ?>" name="lastname" required>
+    <label for="apellido">Apellido</label>
+    <input type="text" class="form-control" value="<?php echo $alumnos->apellido; ?>" name="apellido" required>
   </div>
   <div class="form-group">
-    <label for="address">Domicilio</label>
-    <input type="text" class="form-control" value="<?php echo $person->address; ?>" name="address" required>
+    <label for="seccion">Seccion</label>
+    <input type="text" class="form-control" value="<?php echo $alumnos->seccion; ?>" name="seccion" required>
   </div>
   <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" class="form-control" value="<?php echo $person->email; ?>" name="email" >
+    <label for="nota">Nota</label>
+    <input type="text" class="form-control" value="<?php echo $alumnos->nota; ?>" name="nota" >
   </div>
-  <div class="form-group">
-    <label for="phone">Telefono</label>
-    <input type="text" class="form-control" value="<?php echo $person->phone; ?>" name="phone" >
-  </div>
-<input type="hidden" name="id" value="<?php echo $person->id; ?>">
+<input type="hidden" name="id" value="<?php echo $alumnos->id; ?>">
   <button type="submit" class="btn btn-default">Actualizar</button>
 </form>
 <?php else:?>

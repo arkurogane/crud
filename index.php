@@ -42,44 +42,7 @@ session_start();
 	<?php include "php/navbar.php"; ?>
 	<div class="container">
 		<br>
-    <!--<header>
-       <nav class="navbar navbar-default navbar-fixed-top  navbar-inverse uno">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>  
-                    </button>
-                    <h2>Empresa simulada</h2>
-                </div>
-                <div class="collapse navbar-collapse navbar-right" id="navbar-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">Item #1</a></li>
-                        <li><a href="#">Item #2</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                            Dropdown
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="login.php">Intranet</a></li>
-                            <li><a href="#">Item #B</a></li>
-                            <li  class="divider"></li>
-                            <li><a href="#">Item #C</a></li>
-                        </ul>
-                        </li>
-                    </ul>
-                    <form action="" class="navbar-form navbar-right" role="search">
-                        <div class="from-group">
-                            <input type="text" class="form-control" placeholder="Buscar">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>-->
+		
     <div class="col-md-12">
     	<div id="carousel-1" class="carousel slide" data-ride="carousel">
     		<!--Indicadores-->

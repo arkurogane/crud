@@ -1,21 +1,21 @@
 <?php
 
 if(!empty($_POST)){
-	if(isset($_POST["name"]) &&isset($_POST["lastname"]) &&isset($_POST["email"]) &&isset($_POST["address"]) &&isset($_POST["phone"])){
-		if($_POST["name"]!=""&& $_POST["lastname"]!=""&&$_POST["address"]!=""){
+	if(isset($_POST["nombre"]) &&isset($_POST["apellido"]) &&isset($_POST["seccion"]) &&isset($_POST["nota"])){
+		if($_POST["nombre"]!=""&& $_POST["apellido"]!=""&&$_POST["seccion"]!=""){
 			include "conexion.php";
 			
-			$sql = "insert into person(name,lastname,email,address,phone,created_at) value (\"$_POST[name]\",\"$_POST[lastname]\",\"$_POST[email]\",\"$_POST[address]\",\"$_POST[phone]\",NOW())";
+			$sql = "insert into alumnos(nombre,apellido,seccion,nota) values (\"$_POST[nombre]\",\"$_POST[apellido]\",\"$_POST[seccion]\",\"$_POST[nota]\")";
 			$query = $con->query($sql);
 			if($query!=null){
-				print "<script>alert(\"Agregado exitosamente.\");window.location='../ver.php';</script>";
+				print "<script>alert(\"Agregado exitosamente.\");window.location='../insertar.php';</script>";
 			}else{
-				print "<script>alert(\"No se pudo agregar.\");window.location='../ver.php';</script>";
+				print "<script>alert(\"No se pudo agregar.\");window.location='../insertar.php';</script>";
 
 			}
 		}
 	}
-}
+}{}
 
 
 

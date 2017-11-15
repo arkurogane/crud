@@ -3,7 +3,7 @@
 if(!empty($_GET)){
 			include "conexion.php";
 			
-			$sql = "DELETE FROM person WHERE id=".$_GET["id"];
+			$sql = "DELETE FROM alumnos WHERE id=".$_GET["id"];
 			$query = $con->query($sql);
 			if($query!=null){
 				print "<script>alert(\"Eliminado exitosamente.\");window.location='../ver.php';</script>";

@@ -3,7 +3,7 @@
 include "conexion.php";
 
 $user_id=null;
-$sql1= "select * from person where name like '%$_GET[s]%' or lastname like '%$_GET[s]%' or address like '%$_GET[s]%' or email like '%$_GET[s]%' or phone like '%$_GET[s]%' ";
+$sql1= "select * from alumnos where nombre like '%$_GET[s]%' or apellido like '%$_GET[s]%' or seccion like '%$_GET[s]%' or nota like '%$_GET[s]%'";
 $query = $con->query($sql1);
 ?>
 
@@ -12,18 +12,16 @@ $query = $con->query($sql1);
 <thead>
 	<th>Nombre</th>
 	<th>Apellido</th>
-	<th>Email</th>
-	<th>Direccion</th>
-	<th>Telefono</th>
+	<th>Seccion</th>
+	<th>Notas</th>
 	<th></th>
 </thead>
 <?php while ($r=$query->fetch_array()):?>
 <tr>
-	<td><?php echo $r["name"]; ?></td>
-	<td><?php echo $r["lastname"]; ?></td>
-	<td><?php echo $r["email"]; ?></td>
-	<td><?php echo $r["address"]; ?></td>
-	<td><?php echo $r["phone"]; ?></td>
+	<td><?php echo $r["nombre"]; ?></td>
+	<td><?php echo $r["apellido"]; ?></td>
+	<td><?php echo $r["seccion"]; ?></td>
+	<td><?php echo $r["nota"]; ?></td>
 	<td style="width:150px;">
 		<a href="./editar.php?id=<?php echo $r["id"];?>" class="btn btn-sm btn-warning">Editar</a>
 		<a href="#" id="del-<?php echo $r["id"];?>" class="btn btn-sm btn-danger">Eliminar</a>
