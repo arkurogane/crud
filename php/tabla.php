@@ -74,31 +74,8 @@ $query = $con->query($sql1);
 	<p class="alert alert-warning">No hay resultados</p>
 <?php endif;?>
 <div>
-	<form role="form" method="post" action="ver.php">
-		<button id="<?php echo $r["alumno.id"];?>" class="btn btn-sm btn-primary perro">Guardar
-			<?php
-
-			if(!empty($_POST)){
-				if(isset($_POST["nota"])){
-					if($_POST["nota"]!=""){
-						include "conexion.php";
-
-						$sql = "insert into notas(nota,id_alumno,id_pregunta,id_pregunta) values (\"$_POST[nota]\",\"$_POST[id]\",\"$_POST[pregunta]\")";
-						$query = $con->query($sql);
-						if($query!=null){
-							print "<script>alert(\"Agregado exitosamente.\");window.location='ver.php';</script>";
-						}else{
-							print "<script>alert(\"No se pudo agregar.\");window.location='ver.php';</script>";
-
-						}
-					}
-				}
-			}{}
-			?>
-		</button> 
-	</form>
 	<form role="form" method="post" action="ver.php"> 
-		<button id="<?php echo $r["alumno.id"];?>" class="btn btn-sm btn-success perro">Actualizar
+		<button id="<?php echo $r["alumno.id"];?>" class="btn btn-sm btn-success perro">Guardar
 			<?php
 
 			if(isset($_POST["nota"])){
