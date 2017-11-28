@@ -14,58 +14,33 @@
   </style>
 </head>
 <body>
-	<?php include "php/navbar.php"; ?>
+  <?php 
+  session_start();
+  if (!isset($_SESSION["usuario"])) {
+      //header("Location:login.php");
+  }else{
+    //header("Location:ver.php");
+  }
+  ?>
+  
+	<?php include "php/navbar2.php"; ?>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>VER ENTRADAS</h2>
+        <h2>Notas</h2>
         <!-- Button trigger modal -->
         <div>
           <br>
-          <label>codigo criterio</label> &nbsp;<input type="text" name="codigo" id="criterio" class="sol"> <label>Considera que ESA es un aporte para su desarrollo profesional?</label>
+          <!--<form action="ver.php" method="post">
+          <label>codigo pregunta</label> &nbsp;<input type="text" name="pregunta" id="criterio" class="sol"> <label>Considera que la Empresa Simulada en el Aula es un aporte para su desarrollo profesional?</label>
         </div>
         <div>
           <br>
-          <label>codigo seccion</label> <input type="text" name="codigo" id="seccion" class="sol"> <input type="text" name="codigo" id="nom_seccion" class="luna">
+          <label>codigo seccion</label> <input type="text" name="codigo" id="secion" class="sol"> <input type="text" name="sec" id="nom_seccion" class="luna"> 
+          <button action="ver.php" class="btn btn-primary">filtrar</button>
         </div>
+      </form>-->
         <br><br>
-        <!--<a data-toggle="modal" href="#myModal" class="btn btn-default">Agregar</a>
-        <br><br>
-        
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Agregar</h4>
-              </div>
-              <div class="modal-body">
-                <form role="form" method="post" action="php/agregar.php">
-                  <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" name="nombre" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" class="form-control" name="apellido" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="seccion">Seccion</label>
-                    <input type="text" class="form-control" name="seccion" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="nota">Nota</label>
-                    <input type="text" class="form-control" name="nota" >
-                  </div>
-                  <button type="submit" class="btn btn-default">Agregar</button>
-                </form>
-              </div>
-
-            </div>
-          </div>
-        </div>-->
-
-
         <?php include "php/tabla.php"; ?>
       </div>
     </div>

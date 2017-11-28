@@ -5,7 +5,7 @@
 	<script src="js/jquery.min.js"></script>
 </head>
 <body>
-	<?php include "php/navbar.php"; ?>
+	<?php include "php/navbar2.php"; ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">

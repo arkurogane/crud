@@ -14,8 +14,9 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="./login.php">Login</a></li>
-      
+      <li><a href="./ver.php">Evaluacion</a></li>
+      <li><a href="./insertar.php">Agregar</a></li>
+      <li><a href="./cerrar.php">Cerrar Sesion</a></li>
     </ul>
 <!--<form class="navbar-form navbar-left" role="search" action="./buscar.php">
       <div class="form-group">
