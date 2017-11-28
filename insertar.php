@@ -25,10 +25,6 @@
 							<label for="seccion">Seccion</label>
 							<input type="text" class="form-control" name="seccion" required>
 						</div>
-						<div class="form-group">
-							<label for="nota">Nota</label>
-							<input type="text" class="form-control" name="nota" >
-						</div>
 						<button type="submit" class="btn btn-default">Agregar</button>
 					</form>
 				</div>

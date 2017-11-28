@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-11-2017 a las 21:30:18
+-- Tiempo de generación: 28-11-2017 a las 22:07:01
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `alumnos` (
   `apellido` varchar(40) NOT NULL,
   `seccion` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Volcado de datos para la tabla `alumnos`
@@ -45,7 +45,8 @@ INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `seccion`) VALUES
 (2, 'gerson', 'chaparro', '2'),
 (3, 'chyntia', 'gonzalez', '1'),
 (4, 'giuliano', 'garces', '2'),
-(5, 'felipe', 'a', '4');
+(5, 'felipe', 'a', '4'),
+(6, 'julio', 'verne', '3');
 
 -- --------------------------------------------------------
 
@@ -59,20 +60,21 @@ CREATE TABLE IF NOT EXISTS `notas` (
   `id_alumno` int(11) NOT NULL,
   `id_pregunta` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `notas`
 --
 
 INSERT INTO `notas` (`id`, `nota`, `id_alumno`, `id_pregunta`) VALUES
-(1, 0, 1, 11),
-(2, 0, 2, 11),
-(3, 0, 3, 11),
-(4, 0, 4, 11),
-(5, 0, 5, 11),
-(6, 0, 5, 12),
-(8, 54, 3, 14);
+(1, 5.2, 1, 11),
+(2, 7, 2, 11),
+(3, 6.3, 3, 11),
+(4, 3.96, 4, 11),
+(5, 4.8, 5, 11),
+(6, 5.9, 5, 12),
+(8, 5.4, 3, 14),
+(9, 6.3, 6, 11);
 
 -- --------------------------------------------------------
 
