@@ -1,6 +1,7 @@
 <style type="text/css">
 .sol{
 	width: 60px;
+	border-radius: 5px;
 }
 .perro{
 	float: right;
@@ -9,6 +10,7 @@
 }
 .luna{
 	width: 300px;
+	border-radius: 5px;
 }
 </style>
 
@@ -68,7 +70,7 @@ if(!empty($_POST)){
 				<td><?php echo $r["seccion"]; ?></td>
 				<td><?php
 				echo '<form>'; 
-				echo '<input type="text" class="sol" name="nota" value="'.$r["nota"].'" />';
+				echo '<input type="text" class="sol form-control" name="nota" value="'.$r["nota"].'" />';
 				echo '</form>';
 				?></td>
 				<!--<td style="width:150px;">
@@ -94,27 +96,9 @@ if(!empty($_POST)){
 	<p class="alert alert-warning">No hay resultados</p>
 <?php endif;?>
 <div>
-	<form role="form" method="post" action="#"> 
+	<form role="form" method="post" action="php/update_notas.php"> 
 		<button class="btn btn-sm btn-success perro">Guardar
-			<?php
-
-
-			include "conexion.php";
-			if(isset($_POST["nota"])){
-				if($_POST["nota"]!=0){
-					$sql = "update notas set nota=\"$_POST[nota]\" where id_alumno=\"$_POST[id]\" and id_pregunta=11 ";
-
-					$query = $con->query($sql);
-					if($query!=null){
-
-						print "<script>alert(\"Agregado exitosamente.\");window.location='ver.php';</script>";
-					}else{
-						print "<script>alert(\"No se pudo agregar.\");window.location='ver.php';</script>";
-
-					}
-				}
-			}
-			?>
+			
 		</button>
 	</form>
 </div>
